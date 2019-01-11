@@ -6,7 +6,8 @@ body {
 }
 
 #currentTime {
-  color: blueviolet;
+  color: rgb(39, 24, 241);
+  font-size: 70%;
 }
 #submit-btn {
   background-color: rgb(223, 242, 243);
@@ -31,8 +32,3 @@ body {
   opacity: .95;
 }
 
-font-family: 'Sacramento', cursive; */
-font-family: 'Nanum Myeongjo', serif;
-font-family: 'Spectral SC', serif;
-font-family: 'Spectral', serif;
-font-family: 'Nunito', sans-serif
