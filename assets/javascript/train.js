@@ -24,7 +24,7 @@ $("#submit-btn").on("click", function(event) {
 
   var name = $("#name-input").val().trim();
   var dest = $("#dest-input").val().trim();
-  var time = moment($("#time-input").val().trim(), "HH:mm").format("X");
+  var time = $("#time-input").val().trim();
   var rate = $("#rate-input").val().trim();
 
   var newTrip = {
@@ -70,7 +70,7 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(trainTime);
   console.log(trainFreq);
 
-  var timePretty = moment.unix(trainTime).format("HH:mm");
+  var timePretty = moment(trainTime, "HH:mm").format("hh:mm");
   console.log(timePretty);
 
   // var minsAway = moment().diff(moment(trainTime, "X"), "mins");
@@ -93,7 +93,7 @@ database.ref().on("child_added", function(childSnapshot) {
   //   $("<td>").text(trainFreq),
   //   $("<td>").text(timePretty),
   //   $("<td>").text(minsAway),
-  $("#tbody#train-info").append($tr);
+  $("tbody#train-info").append($tr);
 });
 
   // Append the new row to the table
